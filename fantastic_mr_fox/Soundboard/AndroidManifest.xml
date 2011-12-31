@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.grilledcheeseapps.soundboard"
+    package="com.grilledcheeseapps.soundboard.fantastic_mr_fox"
     android:versionCode="1"
-    android:versionName="VERSION_NAME" >
+    android:versionName="1.0" >
 
     <application
-        android:debuggable="true"
+        
         android:icon="@drawable/icon"
-        android:label="APP_NAME"
+        android:label="Fantastic Mr. Fox Soundboard"
         android:name=".App"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity

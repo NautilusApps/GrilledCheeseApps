@@ -18,17 +18,30 @@ cp -R Soundboard $DIRECTORY
 # move into folder
 cd $DIRECTORY
 
-# ???
-ls
+# customize manifest
+FILE="Soundboard/AndroidManifest.xml"
+sed -i '' -e "s/com.grilledcheeseapps.soundboard/com.grilledcheeseapps.soundboard.$DIRECTORY/g" $FILE
+sed -i '' -e "s/android:versionCode=\"1\"/android:versionCode=\"$VER_CODE\"/g" $FILE
+sed -i '' -e "s/VERSION_NAME/$VER_NAME/g" $FILE
+sed -i '' -e "s/android:debuggable=\"true\"//g" $FILE
+sed -i '' -e "s/APP_NAME/$APP_NAME/g" $FILE
 
+# place res files
+cp header.png Soundboard/res/drawable-hdpi/
+cp icon.png Soundboard/res/drawable-hdpi/
 
+# place asset files
+cp -f settings.json Soundboard/assets/
+cp -rf backgrounds Soundboard/assets/
+cp -rf clips Soundboard/assets/
 
+# build the project
 
 
 
 # cleanup
 echo "cleaning up...\n"
-rm -rf Soundboard
+#rm -rf Soundboard
 
 
 exit 0
