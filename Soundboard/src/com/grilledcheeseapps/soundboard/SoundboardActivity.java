@@ -11,20 +11,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import com.google.ads.Ad;
 import com.google.ads.AdListener;
 import com.google.ads.AdRequest;
@@ -32,13 +31,15 @@ import com.google.ads.AdRequest.ErrorCode;
 import com.google.ads.AdView;
 
 
-public class SoundboardActivity extends Activity implements AdListener, OnClickListener {
+public class SoundboardActivity extends Activity implements AdListener, OnClickListener,
+		OnCompletionListener {
 
 	private String headerColor;
 	private ArrayList<String> backgrounds;
 	private ArrayList<SoundClip> soundClips;
 	private AdView adView;
 	private MediaPlayer mediaPlayer;
+	private Button currentButton;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,7 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		// Boot up the media player
 		mediaPlayer = new MediaPlayer();
 		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+		mediaPlayer.setOnCompletionListener(this);
 	}
 
 	@Override
@@ -85,7 +87,7 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		for (SoundClip clip : soundClips) {
 			// Create the button
 			Button button = new Button(this);
-			button = (Button)getLayoutInflater().inflate(R.layout.button, buttonContainer, false);
+			button = (Button) getLayoutInflater().inflate(R.layout.button, buttonContainer, false);
 			button.setText(clip.getTitle());
 			button.setTag(clip);
 			button.setOnClickListener(this);
@@ -97,9 +99,15 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 
 	@Override
 	public void onClick(View view) {
+		// Just in case we didn't let the other clip finish
+		if (currentButton != null)
+			currentButton.setTextColor(Color.WHITE);
+		currentButton = (Button) view;
+		// Highlight currently playing clip
+		currentButton.setTextColor(Color.YELLOW);
+
 		mediaPlayer.stop();
 		mediaPlayer.reset();
-		
 		SoundClip clip = (SoundClip) view.getTag();
 		try {
 			clip.play(mediaPlayer);
@@ -110,6 +118,13 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void onCompletion(MediaPlayer mp) {
+		// Clear highlighted button
+		if (currentButton != null)
+			currentButton.setTextColor(Color.WHITE);
 	}
 
 	private void parseJsonSettingsFile(JSONObject jo) {
@@ -184,6 +199,5 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 	@Override
 	public void onPresentScreen(Ad arg0) {
 	}
-
 
 }
