@@ -19,7 +19,7 @@ public class SoundClip {
 			soundClip = new SoundClip();
 			soundClip.title = jo.optString("title");
 			soundClip.resource = jo.optString("resource");
-			soundClip.resourceFile = context.getAssets().openFd(soundClip.resource);
+			soundClip.resourceFile = context.getAssets().openFd("clips/" + soundClip.resource);
 		}
 		return soundClip;
 	}

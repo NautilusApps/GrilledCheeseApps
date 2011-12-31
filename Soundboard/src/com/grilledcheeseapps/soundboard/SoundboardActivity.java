@@ -39,6 +39,7 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 	private AdView adView;
 	private MediaPlayer mediaPlayer;
 	private Button currentButton;
+	private Typeface tf;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,8 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		mediaPlayer = new MediaPlayer();
 		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 		mediaPlayer.setOnCompletionListener(this);
+		
+		tf = Typeface.createFromAsset(getAssets(), "arial_rounded_bold.ttf");
 	}
 
 	@Override
@@ -75,7 +78,7 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		ImageView background = (ImageView) findViewById(R.id.background);
 		try {
 			background.setImageDrawable(new BitmapDrawable(getResources(), getAssets().open(
-					backgrounds.get(index))));
+					"backgrounds/" + backgrounds.get(index))));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -90,7 +93,6 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 			button.setText(clip.getTitle());
 			button.setTag(clip);
 			button.setOnClickListener(this);
-			Typeface tf = Typeface.createFromAsset(getAssets(), "arial_rounded_bold.ttf");
 			button.setTypeface(tf);
 			buttonContainer.addView(button);
 		}

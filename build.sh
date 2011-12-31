@@ -10,7 +10,7 @@ echo "App name: $APP_NAME"
 echo "Resource directory: $DIRECTORY"
 echo "Version code: $VER_CODE"
 echo "Version name: $VER_NAME"
-echo "===================================================="
+echo "====================================================\n"
 
 # copy project into folder
 cp -R Soundboard $DIRECTORY
@@ -27,6 +27,7 @@ ls
 
 
 # cleanup
+echo "cleaning up...\n"
 rm -rf Soundboard
 
 
