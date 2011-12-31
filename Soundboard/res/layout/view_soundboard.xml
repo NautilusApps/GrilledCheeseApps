@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:orientation="vertical">
@@ -8,91 +9,125 @@
 	<ImageView
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
+		android:background="#ff0000"
 		android:src="@drawable/header" />
 
-	<ScrollView
+	<FrameLayout
 		android:layout_width="fill_parent"
 		android:layout_height="fill_parent"
-		android:layout_weight="0"
-		android:background="@drawable/background">
+		android:layout_weight="1">
+
+		<ImageView
+			android:id="@+id/background"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:gravity="top"
+			android:scaleType="fitCenter" />
 
 		<LinearLayout
+			android:orientation="vertical"
 			android:layout_width="fill_parent"
-			android:layout_height="wrap_content"
-			android:orientation="vertical">
+			android:layout_height="fill_parent">
 
-			<Button
+			<ScrollView
+				android:id="@+id/scrollview"
 				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
-				
-			<Button
-				android:layout_width="fill_parent"
-				android:layout_height="64dip"
-				android:layout_margin="30dip"
-				android:background="#66000000"
-				android:text="Beagles Love Blueberries" />
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:background="#00000000">
+
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+					<Button
+						android:layout_width="fill_parent"
+						android:layout_height="64dip"
+						android:layout_margin="30dip"
+						android:background="#66000000"
+						android:text="Beagles Love Blueberries" />
+
+				</LinearLayout>
+
+			</ScrollView>
+
+			<com.google.ads.AdView
+				android:id="@+id/adView"
+				android:visibility="gone"
+				android:background="#000000"
+				android:layout_width="wrap_content"
+				android:layout_height="50dip"
+				ads:adUnitId="a14efe6252c1c9f"
+				ads:adSize="BANNER"
+				ads:testDevices="TEST_EMULATOR, 58F57AD0763BFD35A97A0ED1DFCF6113"
+				ads:loadAdOnCreate="true" />
 
 		</LinearLayout>
 
-	</ScrollView>
+	</FrameLayout>
 
 </LinearLayout>
