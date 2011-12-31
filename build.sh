@@ -36,6 +36,7 @@ cp -rf backgrounds Soundboard/assets/
 cp -rf clips Soundboard/assets/
 
 # build the project
+ant release
 
 
 
