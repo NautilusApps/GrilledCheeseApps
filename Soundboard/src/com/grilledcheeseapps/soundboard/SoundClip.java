@@ -4,7 +4,6 @@ import java.io.IOException;
 import org.json.JSONObject;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 
 
@@ -12,30 +11,28 @@ public class SoundClip {
 
 	private String title;
 	private String resource;
+	AssetFileDescriptor resourceFile;
 
-	public SoundClip(JSONObject jo) {
+	public static SoundClip BuildSoundClip(JSONObject jo, Context context) throws IOException {
+		SoundClip soundClip = null;
 		if (jo != null) {
-			title = jo.optString("title");
-			resource = jo.optString("resource");
+			soundClip = new SoundClip();
+			soundClip.title = jo.optString("title");
+			soundClip.resource = jo.optString("resource");
+			soundClip.resourceFile = context.getAssets().openFd(soundClip.resource);
 		}
+		return soundClip;
 	}
 
 	public String getTitle() {
 		return title;
 	}
 
-	public void play(Context context) {
-		try {
-			AssetFileDescriptor fd = context.getAssets().openFd(resource);
-			MediaPlayer mediaPlayer = new MediaPlayer();
-			mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-			mediaPlayer.setDataSource(fd.getFileDescriptor(), fd.getStartOffset(), fd.getLength());
-			mediaPlayer.prepare();
-			mediaPlayer.start();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void play(MediaPlayer player) throws IllegalArgumentException, IllegalStateException, IOException {
+//		player.setDataSource(resourceFile.getFileDescriptor(), resourceFile.getStartOffset(),
+//				resourceFile.getLength());
+//		player.prepare();
+//		player.start();
 	}
 
 }
