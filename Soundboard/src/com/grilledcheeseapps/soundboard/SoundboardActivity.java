@@ -86,7 +86,7 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 			// Create the button
 			Button button = new Button(this);
 			button = (Button)getLayoutInflater().inflate(R.layout.button, buttonContainer, false);
-//			button.setText(clip.getTitle());
+			button.setText(clip.getTitle());
 			button.setTag(clip);
 			button.setOnClickListener(this);
 			Typeface tf = Typeface.createFromAsset(getAssets(), "arial_rounded_bold.ttf");
@@ -97,8 +97,10 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 
 	@Override
 	public void onClick(View view) {
-		SoundClip clip = (SoundClip) view.getTag();
 		mediaPlayer.stop();
+		mediaPlayer.reset();
+		
+		SoundClip clip = (SoundClip) view.getTag();
 		try {
 			clip.play(mediaPlayer);
 		} catch (IllegalArgumentException e) {
