@@ -18,6 +18,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -84,24 +85,12 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		for (SoundClip clip : soundClips) {
 			// Create the button
 			Button button = new Button(this);
-			button.setBackgroundResource(R.drawable.clip_button);
-			button.setText(clip.getTitle());
-			button.setSingleLine(true);
-			button.setEllipsize(TextUtils.TruncateAt.END);
+			button = (Button)getLayoutInflater().inflate(R.layout.button, buttonContainer, false);
+//			button.setText(clip.getTitle());
 			button.setTag(clip);
 			button.setOnClickListener(this);
-
-			// Spacing
-			// button.lay
-			// button.setPadding(32, 32, 32, 320);
-
-			// Font
 			Typeface tf = Typeface.createFromAsset(getAssets(), "arial_rounded_bold.ttf");
 			button.setTypeface(tf);
-			button.setTextColor(Color.WHITE);
-			button.setTextSize(20);
-			button.setShadowLayer(1.0f, 1.0f, 1.0f, Color.parseColor("#99000000"));
-
 			buttonContainer.addView(button);
 		}
 	}
