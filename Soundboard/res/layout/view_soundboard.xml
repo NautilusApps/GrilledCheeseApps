@@ -22,7 +22,9 @@
 			android:layout_width="fill_parent"
 			android:layout_height="fill_parent"
 			android:gravity="top"
-			android:scaleType="fitCenter" />
+			android:scaleType="fitXY"
+			android:adjustViewBounds="true"
+			android:background="#00FF00" />
 
 		<LinearLayout
 			android:orientation="vertical"
@@ -37,81 +39,10 @@
 				android:background="#00000000">
 
 				<LinearLayout
+					android:id="@+id/buttonContainer"
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
-					android:orientation="vertical">
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-					<Button
-						android:layout_width="fill_parent"
-						android:layout_height="64dip"
-						android:layout_margin="30dip"
-						android:background="#66000000"
-						android:text="Beagles Love Blueberries" />
-
-				</LinearLayout>
+					android:orientation="vertical" />
 
 			</ScrollView>
 

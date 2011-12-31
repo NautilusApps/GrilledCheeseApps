@@ -15,6 +15,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import com.google.ads.Ad;
 import com.google.ads.AdListener;
 import com.google.ads.AdRequest;
@@ -32,19 +33,49 @@ public class SoundboardActivity extends Activity implements AdListener {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.view_soundboard);
-
 		loadSettings();
-
-		// Request an Ad
-		adView = (AdView) findViewById(R.id.adView);
-		adView.loadAd(new AdRequest());
-		adView.setAdListener(this);
+		buildClipButtons();
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
 		setTheme();
+		
+		// Request an Ad
+		adView = (AdView) findViewById(R.id.adView);
+		adView.loadAd(new AdRequest());
+		adView.setAdListener(this);
+	}
+	
+	public void setTheme() { 
+		// Select a random background
+		Random random = new Random((new Date()).getTime());
+		int index = random.nextInt(backgrounds.size());
+
+		ImageView background = (ImageView) findViewById(R.id.background);
+		try {
+			 // InputStream stream = getAssets().open("background_1.png");
+			 // BitmapDrawable img = new BitmapDrawable(getResources(),
+			// stream);
+			// // img.setGravity(android.view.Gravity.CENTER);
+			background.setImageDrawable(new BitmapDrawable(getResources(), getAssets().open(
+					backgrounds.get(index))));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+
+	}
+
+	private void buildClipButtons() {
+		
+		LinearLayout buttonContainer = (LinearLayout)findViewById(R.id.buttonContainer);
+		
+		for (SoundClip clip : soundClips) {
+			
+		}
+		
 	}
 
 	private void parseJsonSettingsFile(JSONObject jo) {
@@ -86,27 +117,6 @@ public class SoundboardActivity extends Activity implements AdListener {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-
-	public void setTheme() {
-
-		// Select a random background
-		Random random = new Random((new Date()).getTime());
-		int index = random.nextInt(backgrounds.size());
-
-		ImageView background = (ImageView) findViewById(R.id.background);
-		try {
-			// // InputStream stream = getAssets().open("background_1.png");
-			// // BitmapDrawable img = new BitmapDrawable(getResources(),
-			// stream);
-			// // img.setGravity(android.view.Gravity.CENTER);
-			background.setImageDrawable(new BitmapDrawable(getResources(), getAssets().open(
-					backgrounds.get(index))));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-
 	}
 
 	@Override
