@@ -36,13 +36,21 @@ cp -rf backgrounds Soundboard/assets/
 cp -rf clips Soundboard/assets/
 
 # build the project
+cd Soundboard
 ant release
+cd ..
 
+# copy results
+FILENAME=$DIRECTORY-$VER_CODE-$VER_NAME.apk
+mkdir releases
+mv Soundboard/bin/Soundboard.apk releases/$FILENAME
 
+# copy to Dropbox for testing
+mkdir ~/Dropbox/GrilledCheese
+cp releases/$FILENAME ~/Dropbox/GrilledCheese/
 
 # cleanup
 echo "cleaning up...\n"
-#rm -rf Soundboard
-
+rm -rf Soundboard
 
 exit 0
