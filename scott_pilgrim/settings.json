@@ -3,27 +3,8 @@
     "backgrounds": [
         {
             "filename": "background_1.png"
-        },
-        {
-            "filename": "background_2.png"
         }
     ],
     "clips": [
-        {
-            "title": "Beagles love blueberries",
-            "resource": "clip_1.ogg"
-        },
-        {
-            "title": "Beagles love blueberries",
-            "resource": "clip_1.ogg"
-        },
-        {
-            "title": "Beagles love blueberries",
-            "resource": "clip_1.ogg"
-        },
-        {
-            "title": "Beagles love blueberries",
-            "resource": "clip_1.ogg"
-        }
     ]
 }
