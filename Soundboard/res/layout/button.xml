@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:layout_marginLeft="18dip"
     android:layout_marginRight="18dip"
-    android:layout_marginBottom="24dip"
+    android:layout_marginBottom="22dip"
     android:padding="14dip"
     
     android:background="@drawable/clip_button"

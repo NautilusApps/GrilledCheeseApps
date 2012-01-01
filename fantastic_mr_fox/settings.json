@@ -19,8 +19,64 @@
     ],
     "clips": [
         {
-            "title": "Mr. Fox Whistle",
+            "title": "Mr. Fox whistle",
             "resource": "clip_4.ogg"
+        },
+        {
+            "title": "Mr. Fox eating",
+            "resource": "clip_6.ogg"
+        },
+        {
+            "title": "Just gotta not do it",
+            "resource": "clip_8.ogg"
+        },
+        {
+            "title": "Boggis, Bunce, and Bean",
+            "resource": "clip_9.ogg"
+        },
+        {
+            "title": "You cussin with me",
+            "resource": "clip_12.ogg"
+        },
+        {
+            "title": "The cuss you are",
+            "resource": "clip_13.ogg"
+        },
+        {
+            "title": "Sounds illegal",
+            "resource": "clip_18.ogg"
+        },
+        {
+            "title": "A lot of attitudes",
+            "resource": "clip_21.ogg"
+        },
+        {
+            "title": "Beagels love blueberries",
+            "resource": "clip_22.ogg"
+        },
+        {
+            "title": "Master plan",
+            "resource": "clip_24.ogg"
+        },
+        {
+            "title": "Whackbat instructions",
+            "resource": "clip_27.ogg"
+        },
+        {
+            "title": "Not getting any worse",
+            "resource": "clip_29.ogg"
+        },
+        {
+            "title": "Put this bandit hat on",
+            "resource": "clip_30.ogg"
+        },
+        {
+            "title": "Kind of a big deal",
+            "resource": "clip_32.ogg"
+        },
+        {
+            "title": "Disloyal",
+            "resource": "clip_33.ogg"
         }
     ]
 }
