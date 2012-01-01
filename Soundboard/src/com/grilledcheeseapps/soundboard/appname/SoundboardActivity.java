@@ -1,4 +1,4 @@
-package com.grilledcheeseapps.soundboard;
+package com.grilledcheeseapps.soundboard.appname;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,6 +28,8 @@ import com.google.ads.AdListener;
 import com.google.ads.AdRequest;
 import com.google.ads.AdRequest.ErrorCode;
 import com.google.ads.AdView;
+import com.grilledcheeseapps.soundboard.R;
+import com.grilledcheeseapps.soundboard.SoundClip;
 
 
 public class SoundboardActivity extends Activity implements AdListener, OnClickListener,

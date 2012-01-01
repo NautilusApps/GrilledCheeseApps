@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<ImageView
+		android:id="@+id/header"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:background="#00FF00"
+		android:src="@drawable/header" />
+
+	<FrameLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+
+		<ImageView
+			android:id="@+id/background"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:gravity="top"
+			android:scaleType="fitXY"
+			android:adjustViewBounds="true"
+			android:background="#00FF00" />
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+			<ScrollView
+				android:id="@+id/scrollview"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:layout_weight="1"
+				android:background="#00000000">
+
+				<LinearLayout
+					android:id="@+id/buttonContainer"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+					<View
+						android:layout_width="fill_parent"
+						android:layout_height="32dip" />
+						
+				</LinearLayout>
+
+			</ScrollView>
+
+			<com.google.ads.AdView
+				android:id="@+id/adView"
+				android:visibility="gone"
+				android:background="#000000"
+				android:layout_width="fill_parent"
+				android:layout_height="50dip"
+				ads:adUnitId="a14efe6252c1c9f"
+				ads:adSize="BANNER"
+				ads:testDevices="TEST_EMULATOR, 58F57AD0763BFD35A97A0ED1DFCF6113"
+				ads:loadAdOnCreate="true" />
+
+		</LinearLayout>
+
+	</FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="18dip"
+    android:layout_marginRight="18dip"
+    android:layout_marginBottom="24dip"
+    android:padding="14dip"
+    
+    android:background="@drawable/clip_button"
+   
+    android:shadowColor="#99000000"
+    android:shadowDx="1.0"
+    android:shadowDy="1.0"
+    android:shadowRadius="1.2"
+    android:singleLine="true"
+    android:ellipsize="end"
+    
+    android:text="A really long time ago in a galaxy far far away"
+    android:textColor="#FFFFFF"
+    android:textSize="20sp" />

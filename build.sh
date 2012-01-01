@@ -25,6 +25,13 @@ sed -i '' -e "s/android:versionCode=\"1\"/android:versionCode=\"$VER_CODE\"/g" $
 sed -i '' -e "s/VERSION_NAME/$VER_NAME/g" $FILE
 sed -i '' -e "s/android:debuggable=\"true\"//g" $FILE
 sed -i '' -e "s/APP_NAME/$APP_NAME/g" $FILE
+sed -i '' -e "s/.appname./.$DIRECTORY./g" $FILE
+
+# fix the file tree
+mkdir Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY
+cp Soundboard/src/com/grilledcheeseapps/soundboard/appname/SoundboardActivity.java Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/
+rm -rf Soundboard/src/com/grilledcheeseapps/soundboard/appname
+sed -i '' -e "s/.appname/.$DIRECTORY/g" Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/SoundboardActivity.java
 
 # place res files
 cp header.png Soundboard/res/drawable-hdpi/
@@ -42,15 +49,15 @@ cd ..
 
 # copy results
 FILENAME=$DIRECTORY-$VER_CODE-$VER_NAME.apk
-mkdir releases
-mv Soundboard/bin/Soundboard.apk releases/$FILENAME
+mkdir -p releases
+mv Soundboard/bin/Soundboard-release.apk releases/$FILENAME
 
 # copy to Dropbox for testing
-mkdir ~/Dropbox/GrilledCheese
+mkdir -p ~/Dropbox/GrilledCheese
 cp releases/$FILENAME ~/Dropbox/GrilledCheese/
 
 # cleanup
-echo "cleaning up...\n"
-rm -rf Soundboard
+echo "\ncleaning up...\n\n\n"
+#rm -rf Soundboard
 
 exit 0
