@@ -58,6 +58,6 @@ cp releases/$FILENAME ~/Dropbox/GrilledCheese/
 
 # cleanup
 echo "\ncleaning up...\n\n\n"
-#rm -rf Soundboard
+rm -rf Soundboard
 
 exit 0
