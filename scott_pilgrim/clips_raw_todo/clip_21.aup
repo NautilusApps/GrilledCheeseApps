@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="clip_21_data" version="1.3.0" audacityversion="1.3.14-beta" sel0="0.0000000000" sel1="10.0078004535" vpos="0" h="0.0000000000" zoom="86.1328125000" rate="44100.0">
+	<tags/>
+	<wavetrack name="s_pilgrim_1" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="441344">
+				<waveblock start="0">
+					<simpleblockfile filename="e00001a8.au" len="230284" min="-0.123904" max="0.098736" rms="0.014737"/>
+				</waveblock>
+				<waveblock start="230284">
+					<simpleblockfile filename="e0000cc5.au" len="211060" min="-0.08865" max="0.095239" rms="0.011053"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="s_pilgrim_1" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="441344">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000310.au" len="230284" min="-0.124697" max="0.097072" rms="0.01479"/>
+				</waveblock>
+				<waveblock start="230284">
+					<simpleblockfile filename="e0000cff.au" len="211060" min="-0.092474" max="0.092022" rms="0.010993"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

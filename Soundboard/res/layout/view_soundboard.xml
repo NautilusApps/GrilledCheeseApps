@@ -61,7 +61,6 @@
 				android:layout_height="50dip"
 				ads:adUnitId="a14efe6252c1c9f"
 				ads:adSize="BANNER"
-				ads:testDevices="TEST_EMULATOR, 58F57AD0763BFD35A97A0ED1DFCF6113"
 				ads:loadAdOnCreate="true" />
 
 		</LinearLayout>
