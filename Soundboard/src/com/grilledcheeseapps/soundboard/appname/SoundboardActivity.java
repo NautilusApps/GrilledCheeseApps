@@ -184,7 +184,7 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 
 	@Override
 	public void onReceiveAd(Ad arg0) {
-		adView.setVisibility(View.VISIBLE);
+//		adView.setVisibility(View.VISIBLE);
 	}
 
 	@Override
