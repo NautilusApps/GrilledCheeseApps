@@ -3,8 +3,24 @@
     "backgrounds": [
         {
             "filename": "background_1.png"
-        }
+        },
+        {
+            "filename": "background_2.png"
+        },
+        {
+            "filename": "background_3.png"
+        },
+        {
+            "filename": "background_4.png"
+        },
+        {
+            "filename": "background_5.png"
+        },
     ],
     "clips": [
+        {
+            "title": "Mr. Fox whistle",
+            "resource": "clip.ogg"
+        }
     ]
 }

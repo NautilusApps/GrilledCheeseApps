@@ -21,5 +21,9 @@
         }
     ],
     "clips": [
+        {
+            "title": "Mr. Fox whistle",
+            "resource": "clip_4.ogg"
+        },
     ]
 }
