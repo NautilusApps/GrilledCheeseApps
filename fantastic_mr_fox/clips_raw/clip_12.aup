@@ -4,12 +4,9 @@
 	<tags/>
 	<wavetrack name="mr fox" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" rate="48000" gain="1.0" pan="0.0">
 		<waveclip offset="0.00000000">
-			<sequence maxsamples="524288" sampleformat="131073" numsamples="675979">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="44582">
 				<waveblock start="0">
-					<simpleblockfile filename="e0000adc.au" len="386750" min="-0.89743" max="0.999969" rms="0.171669"/>
-				</waveblock>
-				<waveblock start="386750">
-					<simpleblockfile filename="e0000685.au" len="289229" min="-0.862671" max="0.765045" rms="0.094159"/>
+					<simpleblockfile filename="e00005fa.au" len="44582" min="-0.843689" max="0.990417" rms="0.122325"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
@@ -17,12 +14,9 @@
 	</wavetrack>
 	<wavetrack name="mr fox" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" rate="48000" gain="1.0" pan="0.0">
 		<waveclip offset="0.00000000">
-			<sequence maxsamples="524288" sampleformat="131073" numsamples="675979">
+			<sequence maxsamples="524288" sampleformat="131073" numsamples="44582">
 				<waveblock start="0">
-					<simpleblockfile filename="e000084e.au" len="386750" min="-0.872406" max="0.997498" rms="0.167979"/>
-				</waveblock>
-				<waveblock start="386750">
-					<simpleblockfile filename="e0000fb4.au" len="289229" min="-0.821564" max="0.743805" rms="0.091852"/>
+					<simpleblockfile filename="e00009ca.au" len="44582" min="-0.805603" max="0.944824" rms="0.11739"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>

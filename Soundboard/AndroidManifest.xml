@@ -6,8 +6,8 @@
 
     <application
         android:debuggable="true"
-        android:icon="@drawable/icon"
         android:label="APP_NAME"
+        android:icon="@drawable/icon"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity
             android:configChanges="keyboardHidden|orientation"
