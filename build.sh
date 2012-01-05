@@ -20,18 +20,19 @@ cd $DIRECTORY
 
 # customize manifest
 FILE="Soundboard/AndroidManifest.xml"
-sed -i '' -e "s/com.grilledcheeseapps.soundboard/com.grilledcheeseapps.soundboard.$DIRECTORY/g" $FILE
+sed -i '' -e "s/com.grilledcheeseapps.soundboard.appname/com.grilledcheeseapps.soundboard.$DIRECTORY/g" $FILE
 sed -i '' -e "s/android:versionCode=\"1\"/android:versionCode=\"$VER_CODE\"/g" $FILE
 sed -i '' -e "s/VERSION_NAME/$VER_NAME/g" $FILE
 sed -i '' -e "s/android:debuggable=\"true\"//g" $FILE
 sed -i '' -e "s/APP_NAME/$APP_NAME/g" $FILE
-sed -i '' -e "s/.appname./.$DIRECTORY./g" $FILE
+#sed -i '' -e "s/.appname./.$DIRECTORY./g" $FILE
 
 # fix the file tree
 mkdir Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY
 cp Soundboard/src/com/grilledcheeseapps/soundboard/appname/SoundboardActivity.java Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/
 rm -rf Soundboard/src/com/grilledcheeseapps/soundboard/appname
 sed -i '' -e "s/.appname/.$DIRECTORY/g" Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/SoundboardActivity.java
+sed -i '' -e "s/.appname/.$DIRECTORY/g" Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/SoundClip.java
 
 # place res files
 cp header.png Soundboard/res/drawable-hdpi/

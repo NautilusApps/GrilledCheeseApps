@@ -1,4 +1,4 @@
-package com.grilledcheeseapps.soundboard;
+package com.grilledcheeseapps.soundboard.appname;
 
 import java.io.IOException;
 import org.json.JSONObject;
