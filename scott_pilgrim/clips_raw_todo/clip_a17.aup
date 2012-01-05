@@ -1,0 +1,49 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="clip_a17_data" version="1.3.0" audacityversion="1.3.14-beta" sel0="0.0000000000" sel1="22.1053968254" vpos="0" h="0.0000000000" zoom="86.1328125000" rate="44100.0">
+	<tags/>
+	<wavetrack name="s_pilgrim_2" channel="0" linked="1" mute="0" solo="0" height="150" minimized="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="974848">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000a22.au" len="135869" min="-0.083406" max="0.085853" rms="0.012664"/>
+				</waveblock>
+				<waveblock start="135869">
+					<simpleblockfile filename="e00000a1.au" len="135870" min="-0.067779" max="0.073371" rms="0.010755"/>
+				</waveblock>
+				<waveblock start="271739">
+					<simpleblockfile filename="e0000a97.au" len="262144" min="-0.093845" max="0.115955" rms="0.015793"/>
+				</waveblock>
+				<waveblock start="533883">
+					<simpleblockfile filename="e000034f.au" len="262144" min="-0.108637" max="0.078328" rms="0.014539"/>
+				</waveblock>
+				<waveblock start="796027">
+					<simpleblockfile filename="e0000556.au" len="178821" min="-0.06792" max="0.0728" rms="0.009833"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="s_pilgrim_2" channel="1" linked="0" mute="0" solo="0" height="150" minimized="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="974848">
+				<waveblock start="0">
+					<simpleblockfile filename="e000078e.au" len="135869" min="-0.084974" max="0.086514" rms="0.012781"/>
+				</waveblock>
+				<waveblock start="135869">
+					<simpleblockfile filename="e0000d0d.au" len="135870" min="-0.068374" max="0.078275" rms="0.010733"/>
+				</waveblock>
+				<waveblock start="271739">
+					<simpleblockfile filename="e0000c82.au" len="262144" min="-0.090186" max="0.117921" rms="0.015891"/>
+				</waveblock>
+				<waveblock start="533883">
+					<simpleblockfile filename="e00007dc.au" len="262144" min="-0.115054" max="0.078184" rms="0.014712"/>
+				</waveblock>
+				<waveblock start="796027">
+					<simpleblockfile filename="e000092f.au" len="178821" min="-0.068556" max="0.072188" rms="0.010047"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
