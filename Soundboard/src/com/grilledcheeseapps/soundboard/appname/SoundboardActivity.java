@@ -47,7 +47,10 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		setContentView(R.layout.view_soundboard);
 		loadSettings();
 		buildClipButtons();
-
+		
+		// Volume controls clip playback always
+		this.setVolumeControlStream(AudioManager.STREAM_MUSIC); 
+		
 		// Boot up the media player
 		mediaPlayer = new MediaPlayer();
 		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -100,6 +103,14 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 
 	@Override
 	public void onClick(View view) {
+		// Stop the clip if they tapped the same button again
+		if (currentButton == (Button)view) {
+			currentButton.setTextColor(Color.WHITE);
+			currentButton = null;
+			mediaPlayer.stop();
+			return;
+		}
+		
 		// Just in case we didn't let the other clip finish
 		if (currentButton != null)
 			currentButton.setTextColor(Color.WHITE);
@@ -124,8 +135,10 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 	@Override
 	public void onCompletion(MediaPlayer mp) {
 		// Clear highlighted button
-		if (currentButton != null)
+		if (currentButton != null) {
 			currentButton.setTextColor(Color.WHITE);
+			currentButton = null;
+		}
 	}
 
 	private void parseJsonSettingsFile(JSONObject jo) {

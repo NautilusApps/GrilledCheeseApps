@@ -29,7 +29,7 @@ sed -i '' -e "s/APP_NAME/$APP_NAME/g" $FILE
 
 # fix the file tree
 mkdir Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY
-cp Soundboard/src/com/grilledcheeseapps/soundboard/appname/SoundboardActivity.java Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/
+cp Soundboard/src/com/grilledcheeseapps/soundboard/appname/*.java Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/
 rm -rf Soundboard/src/com/grilledcheeseapps/soundboard/appname
 sed -i '' -e "s/.appname/.$DIRECTORY/g" Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/SoundboardActivity.java
 sed -i '' -e "s/.appname/.$DIRECTORY/g" Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/SoundClip.java
