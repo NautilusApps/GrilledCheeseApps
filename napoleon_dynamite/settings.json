@@ -19,8 +19,328 @@
     ],
     "clips": [
         {
-            "title": "Freakin 12 guage",
-            "resource": "clip_005.ogg"
+            "title": "Whatever I feel like",
+            "resource": "clip_001.ogg"
         },
+        {
+            "title": "Current event",
+            "resource": "clip_002.ogg"
+        },
+        {
+            "title": "Hunting wolverine",
+            "resource": "clip_004.ogg"
+        },
+        {
+            "title": "Chapstick",
+            "resource": "clip_008.ogg"
+        },
+        {
+            "title": "Lips hurt real bad",
+            "resource": "clip_009.ogg"
+        },
+        {
+            "title": "Idiot",
+            "resource": "clip_010.ogg"
+        },
+        {
+            "title": "School gangs",
+            "resource": "clip_012.ogg"
+        },
+        {
+            "title": "Bowstaff skills",
+            "resource": "clip_012b.ogg"
+        },
+        {
+            "title": "Sledgehammer",
+            "resource": "clip_013.ogg"
+        },
+        {
+            "title": "Lucky",
+            "resource": "clip_014b.ogg"
+        },
+        {
+            "title": "Sweet jumps",
+            "resource": "clip_015.ogg"
+        },
+        {
+            "title": "Dang quesadilla",
+            "resource": "clip_017.ogg"
+        },
+        {
+            "title": "Chattin online with babes",
+            "resource": "clip_018.ogg"
+        },
+        {
+            "title": "Cage fighter",
+            "resource": "clip_019.ogg"
+        },
+        {
+            "title": "Scout camp",
+            "resource": "clip_021.ogg"
+        },
+        {
+            "title": "Your mom",
+            "resource": "clip_022.ogg"
+        },
+        {
+            "title": "Fat lard",
+            "resource": "clip_023.ogg"
+        },
+        {
+            "title": "Rex-kwondo",
+            "resource": "clip_024.ogg"
+        },
+        {
+            "title": "Bow to your sensei",
+            "resource": "clip_025.ogg"
+        },
+        {
+            "title": "Watching your back",
+            "resource": "clip_026.ogg"
+        },
+        {
+            "title": "Dress like peter pan",
+            "resource": "clip_027.ogg"
+        },
+        {
+            "title": "Roundhouse to the face",
+            "resource": "clip_028.ogg"
+        },
+        {
+            "title": "Forget about it",
+            "resource": "clip_029.ogg"
+        },
+        {
+            "title": "Build her a cake",
+            "resource": "clip_033.ogg"
+        },
+        {
+            "title": "Grow that moustache",
+            "resource": "clip_035.ogg"
+        },
+        {
+            "title": "Gonna eat your tots?",
+            "resource": "clip_036.ogg"
+        },
+        {
+            "title": "Drinking 1%",
+            "resource": "clip_037.ogg"
+        },
+        {
+            "title": "Give me some tots",
+            "resource": "clip_039b.ogg"
+        },
+        {
+            "title": "Give me some tots (long)",
+            "resource": "clip_039.ogg"
+        },
+        {
+            "title": "Freakin idiot",
+            "resource": "clip_039c.ogg"
+        },
+        {
+            "title": "Come get some ham",
+            "resource": "clip_040.ogg"
+        },
+        {
+            "title": "Spill at the sandunes",
+            "resource": "clip_041.ogg"
+        },
+        {
+            "title": "Full bodyshot",
+            "resource": "clip_044.ogg"
+        },
+        {
+            "title": "Sounds pretty good",
+            "resource": "clip_045.ogg"
+        },
+        {
+            "title": "Cyberspace",
+            "resource": "clip_048.ogg"
+        },
+        {
+            "title": "Already looked into it",
+            "resource": "clip_049.ogg"
+        },
+        {
+            "title": "Whats a liger",
+            "resource": "clip_050.ogg"
+        },
+        {
+            "title": "Napoleon Dynamite",
+            "resource": "clip_051.ogg"
+        },
+        {
+            "title": "Looking really good",
+            "resource": "clip_054.ogg"
+        },
+        {
+            "title": "Tiny little seahorses",
+            "resource": "clip_055.ogg"
+        },
+        {
+            "title": "Go out with me",
+            "resource": "clip_056.ogg"
+        },
+        {
+            "title": "Don't have good skills",
+            "resource": "clip_057.ogg"
+        },
+        {
+            "title": "Skills",
+            "resource": "clip_058.ogg"
+        },
+        {
+            "title": "Girls want guys with skills",
+            "resource": "clip_059.ogg"
+        },
+        {
+            "title": "Still wets the bed",
+            "resource": "clip_063.ogg"
+        },
+        {
+            "title": "Bruisin my neckmeat",
+            "resource": "clip_064.ogg"
+        },
+        {
+            "title": "Freakin idiot",
+            "resource": "clip_065.ogg"
+        },
+        {
+            "title": "Makin sweet mulah",
+            "resource": "clip_066.ogg"
+        },
+        {
+            "title": "Shutup",
+            "resource": "clip_067.ogg"
+        },
+        {
+            "title": "In 5 seconds",
+            "resource": "clip_068.ogg"
+        },
+        {
+            "title": "Piece of crap",
+            "resource": "clip_069.ogg"
+        },
+        {
+            "title": "Large talons",
+            "resource": "clip_071.ogg"
+        },
+        {
+            "title": "$1 an hour",
+            "resource": "clip_072.ogg"
+        },
+        {
+            "title": "Yes",
+            "resource": "clip_073.ogg"
+        },
+        {
+            "title": "Shading on your lip",
+            "resource": "clip_075.ogg"
+        },
+        {
+            "title": "Probably the best",
+            "resource": "clip_076.ogg"
+        },
+        {
+            "title": "My woman",
+            "resource": "clip_077.ogg"
+        },
+        {
+            "title": "Heck yes",
+            "resource": "clip_078.ogg"
+        },
+        {
+            "title": "I'd vote for you",
+            "resource": "clip_083.ogg"
+        },
+        {
+            "title": "What are my skills?",
+            "resource": "clip_084.ogg"
+        },
+        {
+            "title": "Need my skills",
+            "resource": "clip_085.ogg"
+        },
+        {
+            "title": "You can be secretary",
+            "resource": "clip_086.ogg"
+        },
+        {
+            "title": "Sweet",
+            "resource": "clip_086b.ogg"
+        },
+        {
+            "title": "You don't even know",
+            "resource": "clip_088.ogg"
+        },
+        {
+            "title": "Forgot to put in the crystals",
+            "resource": "clip_089.ogg"
+        },
+        {
+            "title": "Soulmate",
+            "resource": "clip_091.ogg"
+        },
+        {
+            "title": "Medieval warrior",
+            "resource": "clip_092.ogg"
+        },
+        {
+            "title": "Matches your season",
+            "resource": "clip_093.ogg"
+        },
+        {
+            "title": "Vote for Pedro",
+            "resource": "clip_094.ogg"
+        },
+        {
+            "title": "Pedro protection",
+            "resource": "clip_095.ogg"
+        },
+        {
+            "title": "Ready to groove?",
+            "resource": "clip_099.ogg"
+        },
+        {
+            "title": "I've been practicing",
+            "resource": "clip_100.ogg"
+        },
+        {
+            "title": "Babe out there for you",
+            "resource": "clip_101.ogg"
+        },
+        {
+            "title": "Peace out",
+            "resource": "clip_102.ogg"
+        },
+        {
+            "title": "Call me Uncle Rico",
+            "resource": "clip_104.ogg"
+        },
+        {
+            "title": "Herbal enhancers",
+            "resource": "clip_106.ogg"
+        },
+        {
+            "title": "Get off my property",
+            "resource": "clip_107.ogg"
+        },
+        {
+            "title": "Maybe I will",
+            "resource": "clip_108.ogg"
+        },
+        {
+            "title": "Just listen to your heart",
+            "resource": "clip_112.ogg"
+        },
+        {
+            "title": "Dreams come true",
+            "resource": "clip_114.ogg"
+        },
+        {
+            "title": "Delicious bass",
+            "resource": "clip_115.ogg"
+        }
     ]
 }
