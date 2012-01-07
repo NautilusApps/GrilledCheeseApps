@@ -22,8 +22,336 @@
     ],
     "clips": [
         {
-            "title": "Mr. Fox whistle",
-            "resource": "clip_4.ogg"
+            "title": "1",
+            "resource": "clip_01.ogg"
         },
+        {
+            "title": "3",
+            "resource": "clip_03.ogg"
+        },
+        {
+            "title": "4",
+            "resource": "clip_04.ogg"
+        },
+        {
+            "title": "6",
+            "resource": "clip_06.ogg"
+        },
+        {
+            "title": "7",
+            "resource": "clip_07.ogg"
+        },
+        {
+            "title": "9",
+            "resource": "clip_09.ogg"
+        },
+        {
+            "title": "11",
+            "resource": "clip_11.ogg"
+        },
+        {
+            "title": "12",
+            "resource": "clip_12.ogg"
+        },
+        {
+            "title": "13",
+            "resource": "clip_13.ogg"
+        },
+        {
+            "title": "14",
+            "resource": "clip_14.ogg"
+        },
+        {
+            "title": "19",
+            "resource": "clip_19.ogg"
+        },
+        {
+            "title": "20",
+            "resource": "clip_20.ogg"
+        },
+        {
+            "title": "21",
+            "resource": "clip_21.ogg"
+        },
+        {
+            "title": "22",
+            "resource": "clip_22.ogg"
+        },
+        {
+            "title": "23",
+            "resource": "clip_23.ogg"
+        },
+        {
+            "title": "26",
+            "resource": "clip_26.ogg"
+        },
+        {
+            "title": "27",
+            "resource": "clip_27.ogg"
+        },
+        {
+            "title": "28",
+            "resource": "clip_28.ogg"
+        },
+        {
+            "title": "29",
+            "resource": "clip_29.ogg"
+        },
+        {
+            "title": "31",
+            "resource": "clip_31.ogg"
+        },
+        {
+            "title": "32",
+            "resource": "clip_32.ogg"
+        },
+        {
+            "title": "33",
+            "resource": "clip_33.ogg"
+        },
+        {
+            "title": "34",
+            "resource": "clip_34.ogg"
+        },
+        {
+            "title": "35",
+            "resource": "clip_35.ogg"
+        },
+        {
+            "title": "36",
+            "resource": "clip_36.ogg"
+        },
+        {
+            "title": "39",
+            "resource": "clip_39.ogg"
+        },
+        {
+            "title": "41",
+            "resource": "clip_41.ogg"
+        },
+        {
+            "title": "42",
+            "resource": "clip_42.ogg"
+        },
+        {
+            "title": "43",
+            "resource": "clip_43.ogg"
+        },
+        {
+            "title": "46",
+            "resource": "clip_46.ogg"
+        },
+        {
+            "title": "48",
+            "resource": "clip_48.ogg"
+        },
+        {
+            "title": "49",
+            "resource": "clip_49.ogg"
+        },
+        {
+            "title": "50",
+            "resource": "clip_50.ogg"
+        },
+        {
+            "title": "51",
+            "resource": "clip_51.ogg"
+        },
+        {
+            "title": "53",
+            "resource": "clip_53.ogg"
+        },
+        {
+            "title": "56",
+            "resource": "clip_56.ogg"
+        },
+        {
+            "title": "59",
+            "resource": "clip_59.ogg"
+        },
+        {
+            "title": "61",
+            "resource": "clip_61.ogg"
+        },
+        {
+            "title": "63",
+            "resource": "clip_63.ogg"
+        },
+        {
+            "title": "65",
+            "resource": "clip_65.ogg"
+        },
+        {
+            "title": "68",
+            "resource": "clip_68.ogg"
+        },
+        {
+            "title": "69",
+            "resource": "clip_69.ogg"
+        },
+        {
+            "title": "70",
+            "resource": "clip_70.ogg"
+        },
+        {
+            "title": "72",
+            "resource": "clip_72.ogg"
+        },
+        {
+            "title": "74",
+            "resource": "clip_74.ogg"
+        },
+        {
+            "title": "75",
+            "resource": "clip_75.ogg"
+        },
+        {
+            "title": "76",
+            "resource": "clip_76.ogg"
+        },
+        {
+            "title": "78",
+            "resource": "clip_78.ogg"
+        },
+        {
+            "title": "80",
+            "resource": "clip_80.ogg"
+        },
+        {
+            "title": "81",
+            "resource": "clip_81.ogg"
+        },
+        {
+            "title": "83",
+            "resource": "clip_83.ogg"
+        },
+        {
+            "title": "84",
+            "resource": "clip_84.ogg"
+        },
+        {
+            "title": "85",
+            "resource": "clip_85.ogg"
+        },
+        {
+            "title": "86",
+            "resource": "clip_86.ogg"
+        },
+        {
+            "title": "89",
+            "resource": "clip_89.ogg"
+        },
+        {
+            "title": "90",
+            "resource": "clip_90.ogg"
+        },
+        {
+            "title": "91",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "92",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "93",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "94",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "96",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "98",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a01",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a02",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a03",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a05",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a06",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a06b",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a07",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a09",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a15",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a19",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a20",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a21",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a24",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a27",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a28",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a33",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a37",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a39",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a39",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a41",
+            "resource": "clip_01.ogg"
+        },
+        {
+            "title": "a42",
+            "resource": "clip_01.ogg"
+        }
     ]
 }
