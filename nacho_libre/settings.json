@@ -15,12 +15,216 @@
         },
         {
             "filename": "background_5.png"
-        },
+        }
     ],
     "clips": [
         {
-            "title": "Mr. Fox whistle",
-            "resource": "clip.ogg"
+            "title": "Just want a salad",
+            "resource": "clip_001.ogg"
+        },
+        {
+            "title": "Join me for toast",
+            "resource": "clip_002.ogg"
+        },
+        {
+            "title": "Nitty gritty",
+            "resource": "clip_005.ogg"
+        },
+        {
+            "title": "My favorite animal",
+            "resource": "clip_006.ogg"
+        },
+        {
+            "title": "Where are the chips?",
+            "resource": "clip_007.ogg"
+        },
+        {
+            "title": "The Lord's chips",
+            "resource": "clip_008.ogg"
+        },
+        {
+            "title": "Since easter",
+            "resource": "clip_010.ogg"
+        },
+        {
+            "title": "See what it tastes like",
+            "resource": "clip_014.ogg"
+        },
+        {
+            "title": "Like a gazelle",
+            "resource": "clip_015.ogg"
+        },
+        {
+            "title": "I believe in science",
+            "resource": "clip_016.ogg"
+        },
+        {
+            "title": "Take it easy",
+            "resource": "clip_017.ogg"
+        },
+        {
+            "title": "Couple of wussies",
+            "resource": "clip_018.ogg"
+        },
+        {
+            "title": "Rip my blouse",
+            "resource": "clip_019.ogg"
+        },
+        {
+            "title": "When you are a man",
+            "resource": "clip_020.ogg"
+        },
+        {
+            "title": "Stretchy pants",
+            "resource": "clip_020a.ogg"
+        },
+        {
+            "title": "Release their wiggles",
+            "resource": "clip_022.ogg"
+        },
+        {
+            "title": "Don't be crazy",
+            "resource": "clip_023.ogg"
+        },
+        {
+            "title": "I love it",
+            "resource": "clip_024.ogg"
+        },
+        {
+            "title": "It was stinky",
+            "resource": "clip_026.ogg"
+        },
+        {
+            "title": "Outta my face",
+            "resource": "clip_029.ogg"
+        },
+        {
+            "title": "You're crazy",
+            "resource": "clip_031.ogg"
+        },
+        {
+            "title": "Greatest fighter ever",
+            "resource": "clip_033.ogg"
+        },
+        {
+            "title": "Eggs were a lie",
+            "resource": "clip_035.ogg"
+        },
+        {
+            "title": "How are you?",
+            "resource": "clip_036.ogg"
+        },
+        {
+            "title": "My pjs",
+            "resource": "clip_041.ogg"
+        },
+        {
+            "title": "Get the wrong idea",
+            "resource": "clip_042.ogg"
+        },
+        {
+            "title": "Let go my blouse",
+            "resource": "clip_044.ogg"
+        },
+        {
+            "title": "Horse face",
+            "resource": "clip_046.ogg"
+        },
+        {
+            "title": "Party song",
+            "resource": "clip_048.ogg"
+        },
+        {
+            "title": "I hate that place",
+            "resource": "clip_049.ogg"
+        },
+        {
+            "title": "Take it easy",
+            "resource": "clip_050.ogg"
+        },
+        {
+            "title": "Sucks to be me",
+            "resource": "clip_052.ogg"
+        },
+        {
+            "title": "How come ya think!?",
+            "resource": "clip_053.ogg"
+        },
+        {
+            "title": "A real douche",
+            "resource": "clip_054.ogg"
+        },
+        {
+            "title": "They need me",
+            "resource": "clip_055.ogg"
+        },
+        {
+            "title": "I hate orphans",
+            "resource": "clip_056.ogg"
+        },
+        {
+            "title": "Say it again",
+            "resource": "clip_056b.ogg"
+        },
+        {
+            "title": "Only believe in science",
+            "resource": "clip_057.ogg"
+        },
+        {
+            "title": "Churchy opportunities",
+            "resource": "clip_058.ogg"
+        },
+        {
+            "title": "Too much focus?",
+            "resource": "clip_060.ogg"
+        },
+        {
+            "title": "I smell cookies",
+            "resource": "clip_061.ogg"
+        },
+        {
+            "title": "I am Nacho",
+            "resource": "clip_062.ogg"
+        },
+        {
+            "title": "Nachooooooo",
+            "resource": "clip_063.ogg"
+        },
+        {
+            "title": "Nipple twist",
+            "resource": "clip_066.ogg"
+        },
+        {
+            "title": "You can't win em all",
+            "resource": "clip_067.ogg"
+        },
+        {
+            "title": "No place for me",
+            "resource": "clip_068.ogg"
+        },
+        {
+            "title": "Probably to die",
+            "resource": "clip_069.ogg"
+        },
+        {
+            "title": "Lucky machette",
+            "resource": "clip_070.ogg"
+        },
+        {
+            "title": "Bruised his bunions",
+            "resource": "clip_071.ogg"
+        },
+        {
+            "title": "Hug hug, kiss kiss",
+            "resource": "clip_074.ogg"
+        },
+        {
+            "title": "In my mind",
+            "resource": "clip_076.ogg"
+        },
+        {
+            "title": "Encarnacion's song",
+            "resource": "clip_077.ogg"
         }
     ]
 }
