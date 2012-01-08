@@ -15,3 +15,5 @@ echo "Building All Soundboards for version $VN \n"
 #./build.sh "Napoleon Dynamite Soundboard" napoleon_dynamite $VC $VN
 
 #./build.sh "Nacho Libre Soundboard" nacho_libre $VC $VN
+
+./build.sh "Austin Powers Soundboard" powers $VC $VN
