@@ -1,14 +1,437 @@
 {
-    "header_color": "#f6c221",
+    "header_color": "#ab2d30",
     "backgrounds": [
         {
             "filename": "background_1.png"
+        },
+        {
+            "filename": "background_2.png"
+        },
+        {
+            "filename": "background_3.png"
+        },
+        {
+            "filename": "background_4.png"
+        },
+        {
+            "filename": "background_5.png"
+        },
+        {
+            "filename": "background_6.png"
         }
     ],
     "clips": [
         {
             "title": "...",
             "resource": "001.ogg"
-        }
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
+        {
+            "title": "...",
+            "resource": "001.ogg"
+        },
     ]
 }
