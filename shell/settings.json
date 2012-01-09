@@ -1,0 +1,133 @@
+{
+    "header_color": "#f6c221",
+    "backgrounds": [
+        {
+            "filename": "background_1.png"
+        },
+        {
+            "filename": "background_2.png"
+        }
+    ],
+    "clips": [
+        {
+            "title": "Introduction",
+            "resource": "01.ogg"
+        },
+        {
+            "title": "Blooper",
+            "resource": "02.ogg"
+        },
+        {
+            "title": "My name is...",
+            "resource": "03.ogg"
+        },
+        {
+            "title": "Friends from upstate",
+            "resource": "04.ogg"
+        },
+        {
+            "title": "Marcel's hat",
+            "resource": "05.ogg"
+        },
+        {
+            "title": "Nibbled on cheese",
+            "resource": "06.ogg"
+        },
+        {
+            "title": "A hair",
+            "resource": "07.ogg"
+        },
+        {
+            "title": "Marcel's skiis",
+            "resource": "08.ogg"
+        },
+        {
+            "title": "Marcel's bean bag",
+            "resource": "10.ogg"
+        },
+        {
+            "title": "For adventure",
+            "resource": "11.ogg"
+        },
+        {
+            "title": "Using a pen",
+            "resource": "13.ogg"
+        },
+        {
+            "title": "Afraid of soda",
+            "resource": "14.ogg"
+        },
+        {
+            "title": "Old tennis sneaker",
+            "resource": "17.ogg"
+        },
+        {
+            "title": "Sunburn",
+            "resource": "18.ogg"
+        },
+        {
+            "title": "Allen",
+            "resource": "19.ogg"
+        },
+        {
+            "title": "You know what they say",
+            "resource": "20.ogg"
+        },
+        {
+            "title": "Can't life anything",
+            "resource": "21.ogg"
+        },
+        {
+            "title": "Sometimes people say",
+            "resource": "22.ogg"
+        },
+        {
+            "title": "Sound violent",
+            "resource": "23.ogg"
+        },
+        {
+            "title": "Walking the dog",
+            "resource": "24.ogg"
+        },
+        {
+            "title": "All the way here",
+            "resource": "25.ogg"
+        },
+        {
+            "title": "If you drive a bug",
+            "resource": "26.ogg"
+        },
+        {
+            "title": "Maple syrup spill",
+            "resource": "27.ogg"
+        },
+        {
+            "title": "Marcel's bead",
+            "resource": "30.ogg"
+        },
+        {
+            "title": "A hotel",
+            "resource": "31.ogg"
+        },
+        {
+            "title": "Why the bus isn't running",
+            "resource": "32.ogg"
+        },
+        {
+            "title": "Used to have a sister",
+            "resource": "33.ogg"
+        },
+        {
+            "title": "Treats and snoozin",
+            "resource": "34.ogg"
+        },
+        {
+            "title": "Smell his face",
+            "resource": "35.ogg"
+        },
+        {
+            "title": "Why I smile",
+            "resource": "36.ogg"
+        }
+    ]
+}
