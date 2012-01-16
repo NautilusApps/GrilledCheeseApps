@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.grilledcheeseapps.soundboard.appname"
+    android:installLocation="auto"
     android:versionCode="1"
     android:versionName="VERSION_NAME" >
 
@@ -15,7 +16,6 @@
             android:name=".SoundboardActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

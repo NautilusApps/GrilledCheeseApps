@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/help"
+        android:icon="@android:drawable/ic_menu_help"
+        android:title="Help"/>
+    
+    <item
+        android:id="@+id/other"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="Other Soundboards"/>
+
+</menu>

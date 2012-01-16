@@ -7,7 +7,7 @@
     android:layout_marginBottom="18dip"
     android:padding="14dip"
     
-    android:background="@drawable/clip_button"
+    android:background="@drawable/button"
    
     android:shadowColor="#99000000"
     android:shadowDx="1.0"
