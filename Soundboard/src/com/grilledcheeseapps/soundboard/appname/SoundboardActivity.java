@@ -12,7 +12,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -23,6 +22,7 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
@@ -43,10 +43,11 @@ import com.google.ads.AdView;
 
 public class SoundboardActivity extends Activity implements AdListener, OnClickListener,
 		OnCompletionListener {
+	public static final String TAG = "SoundboardActivity";
 
 	public static final String PREFS = "prefs";
 	public static final String HELP_SHOWN = "help_shown";
-	
+
 	private String headerColor;
 	private ArrayList<String> backgrounds;
 	private ArrayList<SoundClip> soundClips;
@@ -62,17 +63,17 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		setContentView(R.layout.view_soundboard);
 		loadSettings();
 		buildClipButtons();
-		
+
 		// Volume controls clip playback always
-		this.setVolumeControlStream(AudioManager.STREAM_MUSIC); 
-		
+		this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
 		// Boot up the media player
 		mediaPlayer = new MediaPlayer();
 		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 		mediaPlayer.setOnCompletionListener(this);
-		
+
 		tf = Typeface.createFromAsset(getAssets(), "arial_rounded_bold.ttf");
-		
+
 		SharedPreferences settings = getSharedPreferences(PREFS, 0);
 		if (!settings.getBoolean(HELP_SHOWN, false)) {
 			showHelp();
@@ -128,13 +129,13 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 	@Override
 	public void onClick(View view) {
 		// Stop the clip if they tapped the same button again
-		if (currentButton == (Button)view) {
+		if (currentButton == (Button) view) {
 			currentButton.setTextColor(Color.WHITE);
 			currentButton = null;
 			mediaPlayer.stop();
 			return;
 		}
-		
+
 		// Just in case we didn't let the other clip finish
 		if (currentButton != null)
 			currentButton.setTextColor(Color.WHITE);
@@ -155,34 +156,35 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 			e.printStackTrace();
 		}
 	}
-	
+
 	private static final int CONTEXT_SHARE = 200;
-	
+
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View view, ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, view, menuInfo);
-		lastButton = (Button)view;
+		lastButton = (Button) view;
 		menu.add(0, CONTEXT_SHARE, 0, "Share");
 	}
-	
+
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case CONTEXT_SHARE:
 			Intent share = new Intent(Intent.ACTION_SEND);
 			share.setType("audio/*");
+
+			SoundClip clip = (SoundClip) lastButton.getTag();
+			boolean result = clip.copyForShare(this.getApplicationContext());
 			
-			SoundClip clip = (SoundClip)lastButton.getTag();
-			String filePath = clip.copyForShare((Context)this);
-//
-//			share.putExtra(Intent.EXTRA_STREAM,
-//			  Uri.parse("file:///sdcard/DCIM/Camera/myPic.jpg"));
-//
-//			startActivity(Intent.createChooser(share, "Share Clip"));
-			
-			Toast.makeText(this, filePath, 3000).show();
-			
-			
+			if (result) {
+				Log.d(TAG, "Sharing: " + clip.copyPath);
+				share.putExtra(Intent.EXTRA_STREAM, Uri.parse(clip.copyPath));
+				startActivity(Intent.createChooser(share, "Share Clip"));
+			} else {
+				Toast.makeText(this, "Could not share clip, make sure your sdcard is ready",
+						Toast.LENGTH_LONG).show();
+			}
+
 			return true;
 		default:
 			return super.onContextItemSelected(item);
@@ -249,17 +251,17 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 			e.printStackTrace();
 		}
 	}
-	
+
 	private void showHelp() {
 		String message = "Tap a button to play a sound clip.\n\nLong press a button for more options.\n\nEnjoy!";
-		
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Soundboard Help");
-        builder.setMessage(message);
-        builder.setPositiveButton("Ok", null);
-        builder.show();
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Soundboard Help");
+		builder.setMessage(message);
+		builder.setPositiveButton("Ok", null);
+		builder.show();
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();

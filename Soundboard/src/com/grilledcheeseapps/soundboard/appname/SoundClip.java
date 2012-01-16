@@ -1,23 +1,26 @@
 package com.grilledcheeseapps.soundboard.appname;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileDescriptor;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import org.json.JSONObject;
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
 import android.media.MediaPlayer;
+import android.util.Log;
 
 
 public class SoundClip {
+	public static final String TAG = "SoundClip";
 
 	private String title;
 	private String resource;
 	AssetFileDescriptor resourceFile;
-	public String uri;
+	public String copyPath;
 
 	public static SoundClip BuildSoundClip(JSONObject jo, Context context) throws IOException {
 		SoundClip soundClip = null;
@@ -33,38 +36,56 @@ public class SoundClip {
 	public String getTitle() {
 		return title;
 	}
-	
-	public String copyForShare(Context context) {
-	    AssetManager am = context.getAssets();
-	    String filePath = context.getExternalCacheDir() + "/" + resource;
-	    File file = new File(filePath);
-	    try {
-			OutputStream os = new FileOutputStream(file);
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+
+	public boolean copyForShare(Context context) {
+		// Clear out all files in this directory
+		File cache = context.getExternalCacheDir();
+		Log.d(TAG, "Burning cache: " + cache.getAbsolutePath());
+		if (cache != null) {
+			for (File file : cache.listFiles()) {
+				boolean res = file.delete();
+				if (res)
+					Log.d(TAG, "File burned: " + file.getAbsolutePath());
+				else
+					Log.e(TAG, "Could not burn file: " + file.getAbsolutePath());
+			}
+		}
+
+		// New file location
+		File file = new File(cache.getAbsolutePath() + "/" + resource);
+		Log.d(TAG, "Creating file: " + file.getAbsolutePath());
+		try {
+			boolean res = file.createNewFile();
+			if (res) {
+				Log.d(TAG, "Copying clip...");
+				copy(resourceFile.getFileDescriptor(), file);
+				Log.d(TAG, "Clip copied: " + file.length());
+				copyPath = file.getAbsolutePath();
+				return true;
+			}
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-//	    DBFile.createNewFile();
-//	    byte []b = new byte[1024];
-//	    int i, r;
-//	    String []Files = am.list("");
-//	    Arrays.sort(Files);
-//	    for(i=1;i<10;i++)
-//	    {
-//	           String fn = String.format("%d.db", i);
-//	        if(Arrays.binarySearch(Files, fn) < 0)
-//	               break;
-//	        InputStream is = am.open(fn);
-//	        while((r = is.read(b)) != -1)
-//	            os.write(b, 0, r);
-//	        is.close();
-//	    }
-//	    os.close();
-	    
-	    return filePath;
+
+		return false;
 	}
 
-	public void play(MediaPlayer player) throws IllegalArgumentException, IllegalStateException, IOException {
+	void copy(FileDescriptor src, File dst) throws IOException {
+		InputStream in = new FileInputStream(src);
+		OutputStream out = new FileOutputStream(dst);
+
+		// Transfer bytes from in to out
+		byte[] buf = new byte[1024];
+		int len;
+		while ((len = in.read(buf)) > 0) {
+			out.write(buf, 0, len);
+		}
+		in.close();
+		out.close();
+	}
+
+	public void play(MediaPlayer player) throws IllegalArgumentException, IllegalStateException,
+			IOException {
 		player.setDataSource(resourceFile.getFileDescriptor(), resourceFile.getStartOffset(),
 				resourceFile.getLength());
 		player.prepare();
