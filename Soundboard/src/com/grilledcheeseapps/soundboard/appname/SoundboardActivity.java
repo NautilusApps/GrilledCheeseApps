@@ -12,6 +12,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -20,8 +21,10 @@ import android.graphics.drawable.BitmapDrawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -157,38 +160,112 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 		}
 	}
 
-	private static final int CONTEXT_SHARE = 200;
+	private static final int CONTEXT_SET_RINGTONE = 100;
+	private static final int CONTEXT_ADD_RINGTONE = 200;
+	private static final int CONTEXT_ADD_NOTIFICATIONS = 300;
+	private static final int CONTEXT_ADD_ALARMS = 500;
+	private static final int CONTEXT_SHARE = 600;
 
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View view, ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, view, menuInfo);
 		lastButton = (Button) view;
-		menu.add(0, CONTEXT_SHARE, 0, "Share");
+
+		menu.add(0, CONTEXT_SET_RINGTONE, 0, "Set as Ringtone");
+		menu.add(0, CONTEXT_ADD_RINGTONE, 1, "Add to Ringtones");
+		menu.add(0, CONTEXT_ADD_NOTIFICATIONS, 2, "Add to Notification Ringtones");
+		menu.add(0, CONTEXT_ADD_ALARMS, 4, "Add to Alarms");
+		menu.add(0, CONTEXT_SHARE, 5, "Share");
+
+	}
+
+	private boolean prepForIntent(SoundClip clip) {
+		boolean result = clip.copyForShare(this.getApplicationContext());
+		Log.d(TAG, "Sharing: " + clip.copy.getAbsolutePath());
+		if (!result) {
+			Toast.makeText(this, "Could not share clip, make sure your sdcard is ready",
+					Toast.LENGTH_LONG).show();
+		}
+		return result;
+	}
+
+	private Uri addToRingtones(SoundClip clip, boolean isRingtone, boolean isNotification,
+			boolean isAlarm) {
+		boolean result = false;
+		if (isRingtone)
+			result = clip.copyForRingtone(this.getApplicationContext());
+		else if (isNotification)
+			result = clip.copyForNotification(this.getApplicationContext());
+		else if (isAlarm)
+			result = clip.copyForAlarm(this.getApplicationContext());
+		if (!result) {
+			Toast.makeText(this, "Could not set clip, make sure your sdcard is ready",
+					Toast.LENGTH_LONG).show();
+			return null;
+		}
+
+		ContentValues values = new ContentValues();
+		Log.d(TAG, "content value: " + clip.copy.getAbsolutePath());
+		values.put(MediaStore.MediaColumns.DATA, clip.copy.getAbsolutePath());
+		values.put(MediaStore.MediaColumns.TITLE, clip.getTitle());
+		values.put(MediaStore.MediaColumns.MIME_TYPE, "audio/ogg");
+		values.put(MediaStore.MediaColumns.SIZE, clip.copy.length());
+		values.put(MediaStore.Audio.Media.IS_RINGTONE, isRingtone);
+		values.put(MediaStore.Audio.Media.IS_NOTIFICATION, isNotification);
+		values.put(MediaStore.Audio.Media.IS_ALARM, isAlarm);
+		values.put(MediaStore.Audio.Media.IS_MUSIC, false);
+
+		// Insert into database
+		Uri uri = MediaStore.Audio.Media.getContentUriForPath(clip.copy.getAbsolutePath());
+		return getContentResolver().insert(uri, values);
 	}
 
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
+		Uri ringtone = null;
+		SoundClip clip = (SoundClip) lastButton.getTag();
 		switch (item.getItemId()) {
+		case CONTEXT_SET_RINGTONE:
+			// Add to ringtones storage / database
+			ringtone = addToRingtones(clip, true, false, false);
+
+			// Set as default ringtone
+			if (ringtone != null) {
+				RingtoneManager.setActualDefaultRingtoneUri(this, RingtoneManager.TYPE_RINGTONE,
+						ringtone);
+				Toast.makeText(this, "\"" + clip.getTitle() + "\" set as the default ringtone",
+						Toast.LENGTH_LONG).show();
+			}
+			break;
+		case CONTEXT_ADD_RINGTONE:
+			ringtone = addToRingtones(clip, true, false, false);
+			if (ringtone != null)
+				Toast.makeText(this, "\"" + clip.getTitle() + "\" added to ringtones",
+						Toast.LENGTH_LONG).show();
+			break;
+		case CONTEXT_ADD_NOTIFICATIONS:
+			ringtone = addToRingtones(clip, false, true, false);
+			if (ringtone != null)
+				Toast.makeText(this, "\"" + clip.getTitle() + "\" added to notification ringtones",
+						Toast.LENGTH_LONG).show();
+			break;
+		case CONTEXT_ADD_ALARMS:
+			ringtone = addToRingtones(clip, false, false, true);
+			if (ringtone != null)
+				Toast.makeText(this, "\"" + clip.getTitle() + "\" added to alarms",
+						Toast.LENGTH_LONG).show();
+			break;
 		case CONTEXT_SHARE:
 			Intent share = new Intent(Intent.ACTION_SEND);
 			share.setType("audio/*");
-
-			SoundClip clip = (SoundClip) lastButton.getTag();
-			boolean result = clip.copyForShare(this.getApplicationContext());
-			
-			if (result) {
-				Log.d(TAG, "Sharing: " + clip.copyPath);
-				share.putExtra(Intent.EXTRA_STREAM, Uri.parse(clip.copyPath));
+			if (prepForIntent(clip)) {
+				share.putExtra(Intent.EXTRA_STREAM, Uri.parse(clip.copy.getAbsolutePath()));
 				startActivity(Intent.createChooser(share, "Share Clip"));
-			} else {
-				Toast.makeText(this, "Could not share clip, make sure your sdcard is ready",
-						Toast.LENGTH_LONG).show();
 			}
-
-			return true;
 		default:
 			return super.onContextItemSelected(item);
 		}
+		return true;
 	}
 
 	@Override
@@ -253,7 +330,7 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 	}
 
 	private void showHelp() {
-		String message = "Tap a button to play a sound clip.\n\nLong press a button for more options.\n\nEnjoy!";
+		String message = "Tap a button to play a sound clip.\n\nDrag to scroll for more sound clips.\n\nLong press a button for more options.\n\nEnjoy!";
 
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setTitle("Soundboard Help");

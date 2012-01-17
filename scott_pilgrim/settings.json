@@ -348,6 +348,14 @@
         {
             "title": "Are we done?",
             "resource": "clip_a42.ogg"
+        },
+        {
+            "title": "Don't talk about grammar",
+            "resource": "clip_b01.ogg"
+        },
+        {
+            "title": "KO",
+            "resource": "clip_b02.ogg"
         }
     ]
 }

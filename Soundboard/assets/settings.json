@@ -10,19 +10,19 @@
     ],
     "clips": [
         {
-            "title": "Beagles love blueberries",
+            "title": "Test 1",
             "resource": "clip_1.ogg"
         },
         {
-            "title": "Beagles love blueberries",
+            "title": "Test 2",
             "resource": "clip_1.ogg"
         },
         {
-            "title": "Beagles love blueberries",
+            "title": "Test 3",
             "resource": "clip_1.ogg"
         },
         {
-            "title": "Beagles love blueberries",
+            "title": "Test 4",
             "resource": "clip_1.ogg"
         }
     ]
