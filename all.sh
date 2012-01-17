@@ -18,4 +18,4 @@ echo "Building All Soundboards for version $VN \n"
 
 ./build.sh "Austin Powers Soundboard" powers $VC $VN
 
-./build.sh "Marcele The Shell Soundboard" shell $VC $VN
+./build.sh "Marcel The Shell Soundboard" shell $VC $VN
