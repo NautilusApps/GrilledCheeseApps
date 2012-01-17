@@ -25,7 +25,6 @@ sed -i '' -e "s/android:versionCode=\"1\"/android:versionCode=\"$VER_CODE\"/g" $
 sed -i '' -e "s/VERSION_NAME/$VER_NAME/g" $FILE
 sed -i '' -e "s/android:debuggable=\"true\"//g" $FILE
 sed -i '' -e "s/APP_NAME/$APP_NAME/g" $FILE
-#sed -i '' -e "s/.appname./.$DIRECTORY./g" $FILE
 
 # fix the file tree
 mkdir Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY
@@ -35,8 +34,11 @@ sed -i '' -e "s/.appname/.$DIRECTORY/g" Soundboard/src/com/grilledcheeseapps/sou
 sed -i '' -e "s/.appname/.$DIRECTORY/g" Soundboard/src/com/grilledcheeseapps/soundboard/$DIRECTORY/SoundClip.java
 
 # place res files
-cp header.png Soundboard/res/drawable-hdpi/
-cp icon.png Soundboard/res/drawable-hdpi/
+cp header.png Soundboard/res/drawable-hdpi/header.png
+cp icon.png Soundboard/res/drawable-hdpi/icon.png
+
+# kill then gen folder
+rm -rf Soundboard/bin/
 
 # place asset files
 cp -f settings.json Soundboard/assets/

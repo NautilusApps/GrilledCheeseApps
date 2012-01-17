@@ -7,8 +7,8 @@
 
     <application
         android:debuggable="true"
-        android:label="APP_NAME"
         android:icon="@drawable/icon"
+        android:label="APP_NAME"
         android:theme="@android:style/Theme.Black.NoTitleBar" >
         <activity
             android:screenOrientation="portrait"
