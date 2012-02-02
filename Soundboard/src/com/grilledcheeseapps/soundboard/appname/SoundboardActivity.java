@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -364,6 +366,19 @@ public class SoundboardActivity extends Activity implements AdListener, OnClickL
 	@Override
 	public void onReceiveAd(Ad arg0) {
 		adView.setVisibility(View.VISIBLE);
+
+		// Schedule next ad call
+		int delay = 20000;
+		new Timer().schedule(new TimerTask() {
+			public void run() {
+				SoundboardActivity.this.runOnUiThread(new Runnable() {
+					@Override
+					public void run() {
+						adView.loadAd(new AdRequest());
+					}
+				});
+			}
+		}, delay);
 	}
 
 	@Override

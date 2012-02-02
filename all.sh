@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #Version code
-VC=3
+VC=4
 #Version Name
-VN=1.4
+VN=1.5
 
 echo "\n"
 echo "Building All Soundboards for version $VN \n"
